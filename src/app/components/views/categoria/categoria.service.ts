@@ -23,6 +23,7 @@ export class CategoriaService {
     const url = `${this.baseUrl}/categorias/${id}`
     return this.http.get<Categoria>(url)
   }
+
   create(categoria: Categoria): Observable<Categoria>{
     const url = `${this.baseUrl}/categorias`
     return this.http.post<Categoria>(url, categoria);
@@ -31,6 +32,11 @@ export class CategoriaService {
   delete(id: string): Observable<void>{
     const url = `${this.baseUrl}/categorias/${id}`
     return this.http.delete<void>(url);
+  }
+
+  update(categoria: Categoria): Observable<void>{
+    const url = `${this.baseUrl}/categorias/${categoria.id}`
+    return this.http.put<void>(url, categoria);
   }
 
   message(str: string): void{
