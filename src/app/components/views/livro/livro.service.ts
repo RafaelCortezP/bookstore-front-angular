@@ -18,4 +18,17 @@ export class LivroService {
     const url = `${this.baseUrl}/livros?categoria=${idCat}`
     return this.http.get<Livro[]>(url)
   }
+
+  create(livro: Livro, idCat: String): Observable<Livro> {
+    const url = `${this.baseUrl}/livros?categoria=${idCat}`
+    return this.http.post<Livro>(url, livro)
+  }
+
+  message(str: string): void{
+    this._snack.open(`${str}`, 'OK', {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 3000
+    })
+  }
 }
