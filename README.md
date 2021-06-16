@@ -1,4 +1,4 @@
-https://bookstore-angular-rafael.herokuapp.com/categorias
+https://bookstore-angular-rafael.herokuapp.com
 
 # BookstoreFront
 
